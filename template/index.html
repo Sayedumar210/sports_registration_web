@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+  {{message}}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endfor %}
+{% endif %}
+
+  <div class="container">
+    <h1 class="text-center my-5 text-light">Soprts Council</h1>
+    <br>
+    <div class="container-fluid text-center my-5">
+      <a href="/cricket" class="text-dark ">
+        <button type="button" class="btn btn-outline-primary mx-4 btn-lg">Cricket</button>
+      </a>
+      <a href="/football" class="text-dark">
+        <img src="/static/daniel-norin-lBhhnhndpE0-unsplash.jpg" alt="not found" width='200' height='200'>
+      </a>
+      <a href="/Badminton">
+        <button type="button" href class="btn btn-outline-warning btn-lg mx-4">Badminton</button>
+      </a>
+    </div>
+    <br>
+    <div class="container-fluid text-center my-5">
+      <button type="button" href="/volleyball" class="btn btn-outline-info btn-lg mx-4">Volleyball</button>
+      <button type="button" href="/table_tennis" class="btn btn-outline-danger btn-lg mx-4">Table Tennis</button>
+      <button type="button" href="/atheletics" class="btn btn-outline-light btn-lg mx-4">Atheletics</button>
+    </div>
+    <br>
+    <div class="container-fluid text-center my-5">
+      <button type="button" href="/volleyball" class="btn btn-outline-info btn-lg mx-4">Basketball</button>
+      <button type="button" href="/table_tennis" class="btn btn-outline-danger btn-lg mx-4">Tennis</button>
+    </div>
+  </div>
+{% endblock body %}
